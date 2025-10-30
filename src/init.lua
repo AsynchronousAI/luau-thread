@@ -12,7 +12,7 @@ local THREAD_FINISH_BINDABLE_NAME = "threadFinished"
 local THREAD_ACTOR_NAME = "threadActor"
 local THREAD_RUN_MESSAGE = "runThread"
 
-local runContextIsClient = RunService:IsClient();
+local runContextIsClient = RunService:IsRunning() and RunService:IsClient();
 
 -- Although processorToUse is of type LocalScript | Script, type Script allows the typechecker to work
 local processorToUse = (if runContextIsClient then script:FindFirstChild("clientProcessor") else script:FindFirstChild("serverProcessor")) :: Script
@@ -136,3 +136,4 @@ threadFinishedSignal.Event:Connect(function(threadId: number, actor: Actor, data
 end)
 
 return table.freeze(thread)
+
