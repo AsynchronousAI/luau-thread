@@ -1,5 +1,5 @@
 {
-  "name": "@rbxts/luau-thread-fixed",
+  "name": "@rbxts/luau-thread-fixed-fixed",
   "version": "1.0.1",
   "description": "",
   "main": "src/init.lua",
@@ -27,3 +27,4 @@
     "typescript": "^5.1.6"
   }
 }
+
